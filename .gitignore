@@ -1,0 +1,14 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+node_modules
+ncp-debug.log
+npm-debug*
+.idea
+nohup.out
+coverage
+*.DS_Store
+dump.rdb
+newrelic_agent.log
+paytmfrontend.error.log
+build

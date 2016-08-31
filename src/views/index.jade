@@ -1,0 +1,62 @@
+doctype html
+html(class="no-js", lang="en")
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate')
+    meta(http-equiv='Pragma', content='no-cache')
+    meta(http-equiv='Expires', content='0')
+    meta(name="p:domain_verify", content="578fa68d1988f66b6eeb98681b6646ae")
+    meta(name='fragment', content='!')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    meta(name="title", content=title)
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    meta(name="og_title" property="og:title", content="Paytm Home")
+    meta(name="og_site_name" property="og:site_name" content="Paytm Shop")
+    if !indexFollow
+      meta(name="ROBOTS", content="NOINDEX,NOFOLLOW")
+    else
+      meta(name="ROBOTS", content="INDEX,FOLLOW")
+    link(rel="favicon", href="favicon.ico")
+    link(rel="canonical", ng-href="https://paytm.com/")
+    link(type="application/opensearchdescription+xml", rel="search", href="/opensearch.xml")
+    style#css!= css
+    script(type="application/ld+json").
+     {
+      "@context":"http://schema.org",
+      "@type":"Organization",
+      "name":"Paytm",
+      "url":"https://paytm.com/",
+      "sameAs":["https://www.facebook.com/Paytm",
+      "https://twitter.com/paytm",
+      "https://www.youtube.com/user/PaytmOfficial",
+      "https://instagram.com/paytm/",
+      "https://plus.google.com/+paytm",
+      "https://in.pinterest.com/paytm_official/",
+      "https://www.linkedin.com/company/paytm-mobile-solutions-pvt-ltd-"]
+     }
+  body
+    #app!= body
+    script#source(src=entry, data-initial-state=state)
+    script.
+      var GTM_KEY = '#{trackingId}';
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName('body')[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.appendChild(j);
+      })(window, document, 'script', 'dataLayer', GTM_KEY);
+    script(type='application/ld+json').
+     {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://paytm.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://paytm.com/shop/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+     }
