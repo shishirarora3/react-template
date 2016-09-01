@@ -1,1 +1,13 @@
 @import '../../commonstyles/variables';
+
+.childContainer{
+  display: inline-block;
+  background-color: $whiteSmoke;
+  width:100%;
+}
+.childContainer:before{
+  content: attr(data-key);
+  width:50%;
+  position: relative;
+  display: inline-block;
+}

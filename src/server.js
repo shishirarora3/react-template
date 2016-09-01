@@ -6,9 +6,7 @@ import compression from 'compression';
 import bodyParser from 'body-parser';
 import { port } from './config';
 import {
-  apiproxy,
-  serverSideRender,
-  // authroute
+  serverSideRender
 } from './serverMiddleWares';
 
 if (process.env.NODE_ENV === 'production') {
